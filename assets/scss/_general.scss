@@ -1,0 +1,277 @@
+:root {
+    font-size: 62.5%;
+}
+/* global box-sizing */
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    margin: 0;
+    padding: 0;
+   
+}
+body {
+    font: 400 1.6rem/1.5 $font;
+    color: var(--primary-color);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 100vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+body::-webkit-scrollbar-track,
+.modal-inner::-webkit-scrollbar-track,
+.dropdown-options::-webkit-scrollbar-track {
+    background-color: $primary-color;
+}
+body::-webkit-scrollbar,
+.modal-inner::-webkit-scrollbar,
+.dropdown-options::-webkit-scrollbar {
+    width: .6rem;
+    background-color: $primary-color;
+}
+
+body::-webkit-scrollbar-thumb,
+.modal-inner::-webkit-scrollbar-thumb,
+.dropdown-options::-webkit-scrollbar-thumb {
+    background-color:$secondary-color;
+}
+
+/* wrapper */
+.wrapper {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    position: relative;
+}
+.container,
+.container-narrow,
+.container-wide {
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.container {
+    max-width: $container;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    height: auto;
+}
+.text-center {
+    text-align: center;
+}
+
+
+
+
+.dark-mode.my-account:not(.logged-in) .page-content .user-login {
+    background: #3C3F33!important;
+}
+
+
+.dark-mode {
+    background: #171D07;
+    color: #fff;
+
+    header,
+    footer {
+        background: #171D07;
+        color: #fff!important;
+    }
+
+    .footer-top,
+    .footer-top a,
+    .header-bottom a,
+    .header a,
+    #industry-filter button,
+    .neutral6,
+    .wp-block-quote:not(.is-style-plain),
+    .wp-block-button.is-style-btn-arrow a.wp-block-button__link,
+    .woocommerce .woocommerce-MyAccount-navigation ul li a,
+    .shop-header .shop-header-meta form input,
+    .summary .btn {
+        color: #fff!important;
+    }
+    .wp-block-button.is-style-btn-arrow a.wp-block-button__link:after {
+        background: url(assets/images/btn-arrow-white.svg) no-repeat;
+    }
+
+    .header-bottom,
+    .header-bottom::after,
+    .header-bottom nav,
+    .maps-block,
+    #load-more:after, 
+    #load-more:before {
+        background: #171D07!important;
+    }
+    
+    .wp-block-group.cta-banner
+    {
+        background-color: #171D07!important;
+    }
+
+    .header-bottom #mob-menu-bar>div,
+    form select {
+        background-color: #fff;
+    }
+
+    .testimonials-section,
+    .services-block,
+    .neutral-boxes .wp-block-column,
+    .faq-block {
+        background: #2F3323;
+
+        svg path {
+            fill: #fff;
+        }
+    }
+    .services-block .wp-block-column,
+    .wp-block-group.has-background,
+    #team {
+        background: #3C3F33!important;
+    }
+
+    #theme-toggle path,
+    nav ul li svg path {
+        fill: #fff;
+    }
+
+    .wp-block-quote:not(.is-style-plain) p {
+        color: #C3F147;
+    }
+
+
+    #woocheckout {
+        background: #171D07;
+
+        .woocommerce.wp-block-group.align,
+        #checkoutsidebar,
+        #payment,
+        .shop-container .woo-filters {
+            background: #3C3F33!important;
+        }
+
+        .woocommerce-cart-form .product-name a,
+        .woocommerce-cart-form .product-name .variation {
+            color: #fff;
+        }
+
+        .product-remove svg path {
+            fill: #fff;
+        }
+    }
+
+
+    .shop-container .woo-filters,
+    .header-bottom .container .nav>ul ul.sub-menu {
+        background: #3C3F33!important;
+    }
+    .header-bottom .container .nav>ul ul.sub-menu:before ,
+    .child-page {
+        background-color:  #3C3F33!important;
+    }
+
+    .woocommerce-product-search {
+       input {
+        border-color: #fff!important;
+       }
+
+       button svg path {
+        fill: #fff!important;
+       }
+    }
+
+    .body-content .woocommerce .button, 
+    .body-content .woocommerce-button {
+        color: #fff!important;
+    }
+
+    ul.products li.product h2,
+    ul.products li.product .price,
+    ul.products li.product .button,
+    .woocommerce-pagination ul li .page-numbers {
+        color: #fff!important;
+    }
+
+    .woocommerce-breadcrumb,
+    .woocommerce-content>.product .summary .price {
+        color: #fff!important;
+    }
+    .shippinig-banner {
+        color: $primary-color;
+    }
+    .woocommerce-accordion-tabs .mfn-page-items .accordion-content>.column:nth-child(odd),
+    .woocommerce-accordion-tabs .mfn-page-items .accordion-content>p>b, .woocommerce-accordion-tabs .mfn-page-items .accordion-content>p>strong {
+        background-color: #2F3323;
+    }
+
+    .cart-contents svg path,
+    .user-account:last-child svg path {
+        fill: #fff;
+    }
+
+}//end of dark mode
+
+.woocommerce-shop.dark-mode,
+.tax-product_cat.dark-mode  {
+    .body-content {
+        background-color: #171D07!important;
+    }
+} 
+
+.fancy-list {
+    list-style: none;
+    gap: 2.4rem!important;
+
+    li {
+        position: relative;
+        padding-left: 2.7rem;
+        margin: 0;
+
+        &::before {
+            content: "";
+            background: url(assets/images/check_icon.svg) no-repeat;
+            background-size: contain;
+            background-position: center;
+            position: absolute;
+            left: -10px;
+            top: 2px;
+            width: 2.8rem;
+            height: 2.8rem;
+        }
+    }
+}
+
+
+.fullwidth-img {
+    margin-bottom: 0!important;
+}
+
+.reference-content {
+    .wp-block-columns {
+        margin-top: 8rem!important;
+        margin-bottom: 0!important;
+    }
+}
+
+
+.neutral6 {
+    color: #262626;
+    font-size: 1.8rem;
+    font-family: $alt-font;
+    max-width: 78rem;
+}
+.features-block h3 {
+    letter-spacing: -1.44px;
+}

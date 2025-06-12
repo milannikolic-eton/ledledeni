@@ -1,0 +1,17 @@
+# Node-related
+node_modules/
+package.json
+package-lock.json
+gulpfile.cjs
+
+# Build/output folders (optional, adjust as needed)
+dist/
+build/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*

@@ -1,0 +1,762 @@
+/****** FOOTER BANNER BLOCK ******/
+.footer-banner {
+    overflow: hidden;
+    position: relative;
+    padding: 18rem 0!important;
+
+    div.wp-block-cover__inner-container {
+        max-width: 115.8rem!important;
+        width: calc(100% - 4rem)!important;
+        position: relative;
+        z-index: 2;
+        border-radius: 8px;
+        /*border-bottom: 6px solid #C3F147;*/
+        background: #FFF;
+        color: $primary-color;
+        padding: 0!important;
+
+        .wp-block-image {
+            margin: 0!important;
+        }
+
+        .wp-block-columns {
+            display: flex;
+            align-items: center;
+            gap: 4.8rem;
+            padding: 3.6rem;
+
+            .wp-block-column {
+                display: flex;
+                align-items: center;
+                gap: 1.6rem;
+                font-weight: 600;
+                font-size: 2rem;
+                line-height: 1.2;
+                flex: 1 1 auto;
+                flex-basis: auto !important;
+                width: auto!important;
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+/****** end of FOOTER BANNER BLOCK ******/
+
+
+
+/**********************************/
+
+
+
+/****** TESTIMONIALS ******/
+.testimonials-section {
+    background-color: $neutral-color;
+    padding: 12rem 0;
+
+    .testimonialsSwiper {
+        margin-top: 6rem;
+
+        .testimonial-text {
+            font-weight: 600;
+            line-height: 1.2;
+            font-size: 2.4rem;
+            margin-bottom: 1.6rem;
+            padding: 0 1.8rem;
+            font-family: $alt-font;
+        }
+
+        .testimonial-title {
+            font-size: 2rem;
+            font-weight: 300;
+        }
+
+        .testimonial-subtitle {
+            font-weight: 600;
+            line-height: 1.2;
+            font-family: $alt-font;
+        }
+    }
+
+    .swiper-controls {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 3.2rem;
+        gap: 2.4rem;
+
+        > div {
+            position: relative;
+
+            &::after {
+                display: none;
+            }
+
+            &:hover {
+                opacity: .5;
+            }
+        }
+    }
+}
+
+/****** end of TESTIMONIALS ******/
+
+
+
+/**********************************/
+
+
+
+/****** ZIGZAG ******/
+.zigzag {
+    gap: 16rem;
+
+    .wp-block-column {
+        > .wp-block-image {
+            overflow: hidden;
+            border-radius: .6rem;
+        }
+
+        p.has-text-align-center {
+            line-height: 1.2;
+        }
+
+        .wp-block-group.is-nowrap {
+            align-items: flex-start;
+            line-height: 1.3;
+            gap: 1.2rem;
+
+            p {
+                opacity: .9;
+            }
+
+            .wp-block-image {
+                width: 3.2rem;
+                min-width: 3rem;
+                position: relative;
+                top: 2px;
+            }
+        }
+
+        .wp-block-group.is-nowrap:not(:first-child) {
+            margin-top: 5.2rem;
+        }
+    }
+}
+.zigzag:not(:last-child) {
+    margin-bottom: 24rem;
+}
+/****** end of ZIGZAG ******/
+
+
+
+/**********************************/
+
+
+
+/****** SWIPER GALLERY ******/
+.gallery-block {
+    .wp-block-columns {
+        gap: 4.7rem;
+    }
+
+    .swiper-gallery {
+        margin-top: 7rem;
+    }
+}
+.swiper-gallery {
+    width: calc(100vw - 6px);
+    position: relative;
+    overflow: hidden;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 40vw;
+
+    .swiper-wrapper {
+        transition-timing-function: linear !important;
+        will-change: transform;
+    }
+
+    .swiper-slide {
+        width: auto;
+        max-width: 100%;
+        height: 100%;
+
+        img {
+            height: calc(40vw - 4rem);
+            object-fit: cover;
+        }
+
+        .wp-element-caption {
+            text-align: center;
+        }
+    }
+}
+/****** end of SWIPER GALLERY ******/
+
+
+
+
+/**********************************/
+
+
+
+/****** SERVICES BLOCK ******/
+.services-block {
+    background-color: $neutral-color;
+
+    h2 {
+        margin-bottom: 6rem;
+    }
+
+    .wp-block-columns {
+        gap: 2.4rem;
+
+        .wp-block-column {
+            overflow: hidden;
+            border-radius: .8rem;
+            background-color: #fff;
+            transition: all .23s ease;
+            position: relative;
+
+            .wp-block-image {
+                > img {
+                    aspect-ratio: 484/241;
+                }
+            }
+
+            > p > a {
+                position: absolute;
+                z-index: 10;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                text-indent: -9999px;
+                display: inline-block;
+
+                &:hover {
+                    background: rgba(0,0,0,.4);
+                }
+            }
+
+            .wp-block-group {
+                padding: 3.2rem 3.2rem 3.2rem 6rem!important;
+                position: relative;
+            }
+        }
+        .wp-block-column .wp-block-group::before {
+            font: normal normal 500 2rem/1.6 $alt-font;
+            position: absolute;
+            left: 25px;
+            top: 29px;
+            color: #506419;
+        }
+        .wp-block-column:nth-child(1) .wp-block-group::before {
+            content: "01";
+        }
+        .wp-block-column:nth-child(2) .wp-block-group::before {
+            content: "02";
+        }
+        .wp-block-column:nth-child(3) .wp-block-group::before {
+            content: "03";
+        }
+    }
+}
+/****** end of SERVICES BLOCK ******/
+
+
+
+
+/**********************************/
+
+
+
+/****** MAIN HERO ******/
+.main-hero {
+    min-height: calc(100vh - 182px);
+
+    .wp-block-cover__inner-container {
+        > * {
+            max-width: 80rem;
+        }
+    }
+}
+/****** end of MAIN HERO ******/
+
+
+
+
+
+/**********************************/
+
+
+
+/****** FORM BLOCK ******/
+.form-block {
+    .wp-block-columns {
+        gap: 11rem;
+        padding: 0 3.2rem;
+
+        .wp-block-column:first-child {
+            max-width: 48rem;
+        }
+    }
+}
+/****** end of FORM BLOCK ******/
+
+
+
+
+/**********************************/
+
+
+
+/****** CONTACT PAGE ******/
+.contacts {
+    a {
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .wp-block-column {
+        p {
+            color: #5E6266;
+        }
+    }
+}
+
+.maps-block {
+    position: relative;
+    padding-top: 9rem;
+
+    &::before {
+        content: "";
+        background-color: #F2F7F9;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 40rem;
+        z-index: -1;
+    }
+
+    iframe {
+        width: 100%;
+        margin-top: 8rem;
+    }
+}
+/****** end of CONTACT PAGE ******/
+
+
+
+
+
+/**********************************/
+
+
+/****** NEUTRAL BOXES ******/
+.neutral-boxes:not(:first-child) {
+    margin-top: 3.2rem;
+}
+.neutral-boxes {
+    gap: 3.2rem;
+    .wp-block-column {
+        background-color: $neutral-color;
+        padding: 2.4rem;
+
+        h4 {
+            font-size: 2.4rem;
+            line-height: 1.2;
+            font-family: $alt-font;
+            margin-bottom: 2rem;
+        }
+        .wp-block-image {
+            margin-bottom: 4rem;
+        }
+    }
+}
+
+/****** end of NEUTRAL BOXES ******/
+
+
+
+
+
+/**********************************/
+
+
+
+
+
+
+
+/****** TEAM BLOCK ******/
+#team {
+    background-color: $neutral-color;
+
+    .wp-block-columns {
+        gap: 3.2rem;
+
+        .wp-block-column {
+            position: relative;
+
+            h4 {
+                font-size: 2.4rem;
+                line-height: 1.2;
+                margin-bottom: 0;
+            }
+
+            .wp-block-image {
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    aspect-ratio: 7/8!important;
+                }
+            }
+
+            .wp-block-image:nth-child(2) {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: -1;
+                transition: all .33s ease-in-out;
+                opacity: 0;
+            }
+            &:hover {
+                .wp-block-image:nth-child(2) {
+                    z-index: 5;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+/****** end of TEAM BLOCK ******/
+
+
+
+
+
+/**********************************/
+
+
+
+
+
+/****** MISSION COLUMNS ******/
+.mission-columns {
+    gap: 8rem;
+    justify-content: center;
+
+    .wp-block-column {
+        max-width: 43.8rem;
+        width: 100%;
+
+        h4 {
+            font-size: 2.4rem;
+            letter-spacing: -0.96px;
+            line-height: 1.2;
+        }
+    }
+    
+}
+.mission-columns:not(:first-child) {
+    margin-top: 6rem;
+}
+/****** end of MISSION COLUMNS ******/
+
+
+
+
+
+/**********************************/
+
+
+
+
+/****** FULLWIDTH COLUMNS ******/
+.fullwidth-columns {
+    position: relative;
+    width: calc(100vw - 6px);
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 8rem;
+
+    h3 {
+        font-size: 3.6rem;
+        line-height: 1.2;
+        margin: 2rem auto!important;
+    }
+
+    p {
+        margin: 2rem auto!important;
+    }
+
+    .txt > * {
+        max-width: 61rem;
+        margin: auto;
+    }
+
+    ul {
+        font-size: 2rem;
+    }
+}
+/****** end of FULLWIDTH COLUMNS ******/
+
+
+
+
+
+/**********************************/
+
+
+
+
+/****** NUMBER COLUMNS ******/
+.number-columns {
+    margin-top: 8rem;
+    gap: 3.2rem!important;
+    
+    h4 {
+        font-size: 2.4rem;
+        line-height: 1.2;
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+
+        strong {
+            background-color: #E1F8A2;
+            color: rgba(80, 100, 25, 1);
+            font-size: 2rem;
+            font-weight: 500;
+            width: 3.6rem;
+            height: 3.6rem;
+            display: inline-flex;
+            border-radius: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    p {
+        font-family: $alt-font;
+        line-height: 1.2;
+    }
+}
+/****** end of NUMBER COLUMNS ******/
+
+
+
+
+
+/**********************************/
+
+
+
+
+
+
+/****** REFERENCES GRID ******/
+.child-pages-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.2rem;
+    margin-top: 8rem;
+
+    .child-page {
+        max-width: calc(33.33% - 22px);
+        border-radius: 8px;
+        background: #FFF;
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
+        padding: 2.4rem 1.2rem 1.2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+
+        p {
+            line-height: 1.2;
+            font-family: $alt-font;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+        }
+        
+        .child-page-thumbnail {
+            margin-top: auto;
+            border-radius: .8rem;
+            overflow: hidden;
+            position: relative;
+
+            a::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                transition: all .23s ease;
+                background-color: rgba(0, 0, 0, 0.55);
+                opacity: 0;
+            }
+
+            &:hover a::before {
+                opacity: 1;
+            }
+
+            img {
+                aspect-ratio: 480/304;
+                object-fit: cover;
+                width: 100%;
+                transition: all .23s ease;
+            }
+        }
+    }
+}
+/****** end of REFERENCES GRID ******/
+
+
+
+
+
+/**********************************/
+
+
+
+
+
+
+/****** FAQ ******/
+.faq-block {
+    background-color: $neutral-color;
+
+    .accordions-wrapper {
+        max-width: 76.8rem;
+        margin: 4rem auto;
+
+        .accordion:first-child {
+            padding-top: 0;
+            border: none;
+        }
+        .accordion {
+            border-top: 1px solid #C6CCD7;
+            padding-top: 2.4rem;
+            margin-bottom: 3.2rem;
+            font-family: $alt-font;
+
+            .accordion-title {
+                cursor: pointer;
+                font-weight: 500;
+                font-size: 2rem;
+                letter-spacing: -0.8px;
+                position: relative;
+                padding-right: 3rem;
+            }
+            .accordion-title::after {
+                content: "";
+                position: absolute;
+                top: 2px;
+                right: 0;
+                background: url(assets/images/plus-circle.svg) no-repeat;
+                background-size: contain;
+                width: 2.4rem;
+                height: 2.4rem;
+            }
+            .accordion-title.opened::after {
+                content: "";
+                position: absolute;
+                top: 2px;
+                right: 0;
+                background: url(assets/images/minus-circle.svg) no-repeat;
+                background-size: contain;
+                width: 2.4rem;
+                height: 2.4rem;
+            }
+
+            .accordion-content {
+                line-height: 1.2;
+                display: none;
+                padding-right: 4rem;
+            }
+        }
+    }
+}
+/****** end of FAQ ******/
+
+
+
+
+
+/**********************************/
+
+
+
+
+/****** CTA BANNER ******/
+body .wp-block-group .wp-block-group.cta-banner {
+    background-color: #fff;
+    border-radius: 1.6rem;
+    max-width: 120rem;
+    margin: 8rem auto 0;
+    padding: 3.2rem!important;
+
+}
+
+
+/****** end of CTA BANNER ******/
+
+
+
+
+
+/**********************************/
+
+/*
+*
+* RESPONSIVE
+*
+*/
+@media only screen and (max-width:1024px) {
+    .form-block .wp-block-columns {
+        gap: 4rem!important;
+    }
+    body .zigzag {
+        gap: 5rem;
+    }
+    .zigzag:not(:last-child) {
+        margin-bottom: 8rem;
+    }
+    .child-pages-list .child-page {
+        max-width: calc(50% - 8px);
+    }
+    body .child-pages-list {
+        gap: 1.6rem;
+    }
+}
+@media only screen and (max-width:781px) {
+    .form-block .wp-block-columns {
+        padding: 0!important;
+    }
+    .gallery-block .swiper-gallery {
+        margin-top: 2rem;
+    }
+    .gallery-block .wp-block-spacer {
+        display: none;
+    }
+    .gallery-block .wp-block-columns {
+        gap: 0!important;
+    }
+}
+@media only screen and (max-width:767px) {
+    .wpcf7-form .firstname, .wpcf7-form .half-col, .wpcf7-form .lastname {
+        max-width: 100%!important;
+    }
+    h2 {
+        hyphens: auto;
+    }
+    .child-pages-list .child-page {
+        max-width: 100%!important;
+    }
+}
