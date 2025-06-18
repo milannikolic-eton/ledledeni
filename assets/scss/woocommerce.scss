@@ -856,6 +856,16 @@ ul.products {
     }
 }
 
+#order_review_heading {
+    overflow: hidden;
+    text-indent: -9999999px;
+
+    &::after {
+        content: "Zahlungsart";
+        text-indent: 0;
+        float: left;
+    }
+}
 
 
 .pswp {
@@ -1014,7 +1024,7 @@ ul.products {
         width: 100%;
 
         &::after {
-            content: "Zusammenfassung bestellen";
+            content: "Bestellung";
             display: block;
             font-weight: 600;
             font-size: 2rem;
@@ -1186,7 +1196,9 @@ ul.products {
         margin-top: 3.2rem;
     }
 
-
+    .wc_payment_methods img {
+        display: none;
+    }
 
     .payment_methods,
     .place-order {
@@ -1363,7 +1375,7 @@ ul.products {
 }
 
 .woocommerce-cart-form::before {
-    content: "Der Warenkorb";
+    content: "Warenkorb";
     display: block;
     font-size: 3.6rem;
     font-family: $alt-font;
@@ -1520,11 +1532,17 @@ ul.products {
     font-size: 2.4rem;
     position: relative;
     top: -50px;
+
+    strong {
+        font-weight: 600;
+    }
 }
+
 .woocommerce-terms-and-conditions-wrapper {
     position: relative;
     bottom: -50px;
 }
+
 #billing_kommission_field {
     margin-bottom: 4rem;
     label {

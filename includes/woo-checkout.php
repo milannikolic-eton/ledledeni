@@ -246,7 +246,7 @@ add_action('woocommerce_cart_calculate_fees', function() {
         $discount_amount = ($cart->subtotal_ex_tax * $discount_percentage) / 100;
         
         // Apply the discount as a negative fee (before tax) with percentage in label
-        $cart->add_fee(sprintf(__('Ihr vereinbarter Rabatt (%d%%)', 'your-textdomain'), $discount_percentage), -$discount_amount, false);
+        $cart->add_fee(sprintf(__('Ihr Rabatt (%d%%)', 'your-textdomain'), $discount_percentage), -$discount_amount, false);
     }
 });
 
@@ -277,4 +277,19 @@ function redirect_empty_cart_to_shop() {
         wp_safe_redirect(wc_get_page_permalink('shop'));
         exit;
     }
+}
+
+
+
+/** Custom text for accept terms and conditions **/
+add_filter( 'woocommerce_get_terms_and_conditions_checkbox_text', 'custom_german_terms_text' );
+function custom_german_terms_text( $text ) {
+    $terms_url = home_url('/allgemeine-geschaeftsbedingungen/');
+    $privacy_url = home_url('/datenschutzrichtlinie/');
+    
+    return sprintf(
+        __( 'Ich habe die <a href="%s" target="_blank">AGB</a> und <a href="%s" target="_blank">Datenschutzerklärung</a> gelesen und stimme ihnen zu', 'woocommerce' ),
+        esc_url( $terms_url ),
+        esc_url( $privacy_url )
+    );
 }
