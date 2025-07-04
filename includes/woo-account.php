@@ -17,8 +17,7 @@ function remove_items_from_my_account($menu_items) {
 
 
 // Redirect users from My Account Dashboard to Orders
-// Redirect users from My Account Dashboard to Orders
-add_action('template_redirect', function () {
+/*add_action('template_redirect', function () {
     if (is_account_page()) {
         global $wp;
         $current_endpoint = !empty($wp->request) ? explode('/', $wp->request)[1] : '';
@@ -29,7 +28,22 @@ add_action('template_redirect', function () {
             exit;
         }
     }
+});*/
+
+add_action('template_redirect', function () {
+    if (is_account_page()) {
+        global $wp;
+        $request_parts = explode('/', $wp->request);
+        $current_endpoint = isset($request_parts[1]) ? $request_parts[1] : '';
+
+        // Redirect only if no specific endpoint is set (i.e., user is on /my-account/)
+        if (empty($current_endpoint)) {
+            wp_redirect(wc_get_endpoint_url('orders'));
+            exit;
+        }
+    }
 });
+
 
 
 

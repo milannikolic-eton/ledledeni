@@ -246,7 +246,7 @@ add_action('woocommerce_cart_calculate_fees', function() {
         $discount_amount = ($cart->subtotal_ex_tax * $discount_percentage) / 100;
         
         // Apply the discount as a negative fee (before tax) with percentage in label
-        $cart->add_fee(sprintf(__('Ihr Rabatt (%d%%)', 'your-textdomain'), $discount_percentage), -$discount_amount, false);
+        $cart->add_fee(sprintf(__('Ihr Rabatt (%.2f%%)', 'your-textdomain'), $discount_percentage), -$discount_amount, false);
     }
 });
 
@@ -292,4 +292,15 @@ function custom_german_terms_text( $text ) {
         esc_url( $terms_url ),
         esc_url( $privacy_url )
     );
+}
+
+
+/**
+ * Hide bank details for BACS
+ */
+add_filter('woocommerce_bacs_account_fields', 'hide_bacs_account_details', 10, 2);
+
+function hide_bacs_account_details($account_fields, $order_id) {
+    // Return an empty array to hide all bank accounts
+    return array();
 }
